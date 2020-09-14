@@ -24,6 +24,7 @@ def get_projects():
     """
     Return json with public projets
     """
+    
     url = urlGitlab+"api/v4/projects?visibility=public"
     headers = {"Accept": "application/json","PRIVATE-TOKEN": token}
     req = requests.get(url, headers=headers)
@@ -34,7 +35,7 @@ def get_projects():
 
 def get_groups():
     """
-    Return json with public projects
+    Return json with public groups
     """
     url = urlGitlab+"api/v4/groups"
     headers = {"Accept": "application/json"}
